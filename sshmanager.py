@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
-
 import os
-import sys
 import json
 
 from pprint import pprint
@@ -138,7 +135,3 @@ class SshManager:
     def _get_config_file_path(self):
         """ Return config file path"""
         return os.path.join(os.path.expanduser(self.CONFIG_PATH))
-
-if __name__ == "__main__":
-    sshm = SshManager()
-    sshm.process(sys.argv)
