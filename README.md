@@ -22,11 +22,11 @@ python3 setup.py install
 ## Listing connections
 ```bash
 sshm.py
-🗁 amazon
+📂 amazon
   🖳 web1
   🖳 web2
-🗁 azure
-  🗁 web
+📂 azure
+  📂 web
     🖳 node1
     🖳 node2
   🖳 db

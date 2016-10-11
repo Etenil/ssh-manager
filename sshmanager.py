@@ -105,7 +105,7 @@ class SshManager:
     def _print_hierarchy(self, item, indent=0):
         for key in item:
             if not 'host' in item[key]:
-                print("  " * indent + b'\xf0\x9f\x97\x81'.decode('utf8') + ' ' + key)
+                print("  " * indent + b'\xf0\x9f\x93\x82'.decode('utf8') + ' ' + key)
                 self._print_hierarchy(item[key], indent + 1)
             else:
                 print("  " * indent + b'\xf0\x9f\x96\xb3'.decode('utf8') + ' ' + key)
