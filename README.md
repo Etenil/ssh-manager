@@ -23,20 +23,20 @@ python3 setup.py install
 ```bash
 sshm.py
 📂 amazon
-  🖳 web1
-  🖳 web2
+  💻 web1
+  💻 web2
 📂 azure
   📂 web
-    🖳 node1
-    🖳 node2
-  🖳 db
+    💻 node1
+    💻 node2
+  💻 db
 ```
 
 ## List connections for a specific environment
 ```bash
 sshm.py azure/web
-🖳 node1
-🖳 node2
+💻 node1
+💻 node2
 ```
 
 ## Connect to a server
