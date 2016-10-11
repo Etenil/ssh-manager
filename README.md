@@ -6,6 +6,13 @@ Ssh manager in terminal
 - SSH
 
 # Install
+
+## With pip
+```bash
+pip install ssh-manager
+```
+
+## From source
 ```bash
 python3 setup.py install
 ```
