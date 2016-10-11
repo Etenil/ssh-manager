@@ -4,3 +4,5 @@ MANIFEST
 __pycache__
 *.py[co]
 *.egg-info
+# Used for testing
+/sshm.py
