@@ -1,4 +1,8 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+
+import sys
+if sys.version_info < (3,4):
+    sys.exit('Sorry, Python < 3.4 is not supported')
 
 from distutils.core import setup
 
