@@ -105,6 +105,13 @@ sshm.py -d amazon/db/server1
 `~/.config/sshm.json` file will be created after first run.
 Edit it as you need.
 
+## Adding passwords
+If `sshpass` is installed on your machine, ssh-manager supports saving ssh passwords.
+To add a passwords, edit `~/.config/sshm.json` and add a `password` value to your
+connection.
+
+Obviously this is not safe nor is it cyphered. Use with care.
+
 # Bash completion for connections
 This can be easily added with the following snippet in your `$HOME/.bashrc` file:
 

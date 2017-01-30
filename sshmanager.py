@@ -1,8 +1,6 @@
 import os
 import json
 
-from pprint import pprint
-
 class SshManager:
     """
     Manages SSH connections.
@@ -92,7 +90,8 @@ class SshManager:
 
     def _run(self, connection):
         """ Run command with args """
-        args = ['ssh']
+        args = []
+        command = 'ssh'
 
         if not 'host' in connection:
             print('Connection has no host defined')
@@ -109,10 +108,17 @@ class SshManager:
 
         args.append(host)
 
+        if 'password' in connection and connection['password'] is not None:
+            command = 'sshpass'
+            args.insert(0, 'ssh')
+            args.insert(0, connection['password'])
+            args.insert(0, '-p')
+            args.insert(0, 'sshpass')
+
         if 'command' in connection and connection['command'] is not None:
             args.append(connection['command'])
 
-        os.execvp('ssh', args)
+        os.execvp(command, args)
 
     def _filter_hierarchy(self, item, fragment):
         items = {}
