@@ -114,6 +114,8 @@ class SshManager:
             args.insert(0, connection['password'])
             args.insert(0, '-p')
             args.insert(0, 'sshpass')
+        else:
+            args.insert(0, 'ssh')
 
         if 'command' in connection and connection['command'] is not None:
             args.append(connection['command'])
